@@ -241,8 +241,6 @@
                 alert('Array is full (max 100 elements)');
             }
         }
-
-        // Mode Switch
         modeButtons.forEach(btn => {
             btn.addEventListener('click', () => {
                 modeButtons.forEach(b => b.classList.remove('active'));
@@ -270,8 +268,6 @@
                 resetArray();
             });
         });
-
-        // Algorithm Button Handlers
         algoButtons.forEach(btn => {
             btn.addEventListener('click', () => {
                 if (btn.classList.contains('disabled')) return;
@@ -291,8 +287,6 @@
                 resetArray();
             });
         });
-
-        // Search functionality
         searchInput.addEventListener('input', (e) => {
             const searchTerm = e.target.value.toLowerCase();
             
@@ -308,7 +302,6 @@
             });
         });
 
-        // Event Listeners
         startBtn.addEventListener('click', startSorting);
         searchBtn.addEventListener('click', startSearching);
         addTargetBtn.addEventListener('click', addTargetToArray);
@@ -332,5 +325,4 @@
             speedValue.textContent = animationSpeed;
         });
 
-        // Initialize
         generateArray();
